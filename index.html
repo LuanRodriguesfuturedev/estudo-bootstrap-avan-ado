@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Cards</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <header id="cabecalho"><!--cabeçalho-->
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Navbar</h1>
+                <button data-bs-toggle="collapse" data-bs-target="#menu" type="button" class="navbar-toggler">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promocoes">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="btn-checar-email" class="btn btn-warning" type="button">Checar caixa de mensagens</button>
+            </div>
+        </div>
+    </header>
+    <!--como fazer a rolagem de pagina ir atualizando o menumostrando em que area você está-->
+    <!--MAIS criação de abas -->
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" class="container">
+        <section id="inicio">
+            <h2>Início</h2>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div>
+                <nav class="nav nav-tabs"><!-- Nav-tabs Ou nav-pills-->
+                    <button data-bs-toggle="tab" data-bs-target="#aba1" class="nav-link active" type="button">Moda Infantil</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba2" class="nav-link" type="button">Moda Masculina</button>
+                    <button data-bs-toggle="tab" data-bs-target="#aba3" class="nav-link" type="button">Moda Feminina</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="aba1">
+                        Produtos Moda Infantil
+                    </div>
+                    <div class="tab-pane" id="aba2">
+                        Produtos Moda Masculina
+                    </div>
+                    <div class="tab-pane" id="aba3">
+                        Produtos Moda Feminina
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+        </section>
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"><!--Toast-->
+        <!--p-3 padding-->
+        <div data-bs-autohide="false" class="toast" id="mensagens-alerta">
+            <header class="toast-header">
+                <strong>Importante</strong>
+            </header>
+            <div class="toast-body">
+                Você possui 10 mensagens não lidas.
+                <div class="mt-2 pt-2 border-top">
+                    <!--margin-top2 // padding-top2 // uma borda no topo -->
+                    <button data-bs-dismiss="toast" class="btn btn-danger"> Descartar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-1"> <!--Carousel-->
+        <div id="carousel-function" class="carousel carousel-fade slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!--img com estilização tbm no css-->
+                <div data-bs-interval="2000" class="carousel-item active">
+                    <img src="./images/imovel-1.webp" />
+                    <div class="carousel-caption">
+                        <h2 id="text-radius" class="text-bg-success p-2">carousel 1</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img src="./images/imovel-2.webp" />
+                    <div class="carousel-caption">
+                        <h2 id="text-radius" class="text-bg-success p-2">carousel 2</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="2000" class="carousel-item">
+                    <img
+                        src="https://media.istockphoto.com/id/1392115615/pt/foto/3d-rendering-of-new-concrete-house-in-modern-style.webp?s=2048x2048&w=is&k=20&c=VJk-0Y9VUiXkmd8okc8Jq8BO5b0bwldKFITLj4s3n7s=" />
+                    <div class="carousel-caption">
+                        <h2 id="text-radius" class="text-bg-success p-2">carousel 3</h2>
+                    </div>
+                </div>
+                <button data-bs-target="#carousel-function" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button data-bs-target="#carousel-function" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button class="active" type="button" data-bs-target="#carousel-function" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-function" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-function" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container"> <!--Dropdown-->
+        <div class="btn-group">
+            <button class=" mt-1 btn btn-primary">
+                dropdown
+            </button>
+            <button data-bs-toggle="dropdown"
+                class=" mt-1 btn btn-primary dropdown-toggle dropdown-toggle-split"></button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li class="dropdown-item">
+                    <a href="#">menu-dropdown</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">menu-dropdown</a>
+                </li>
+                <li class="dropdown-item">
+                    <a href="#">menu-dropdown</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mt-2 container"> <!--Modal-->
+        <button data-bs-toggle="modal" data-bs-target="#abrir-modal" class="btn btn-success">
+            Abrir modal
+        </button>
+        <div class="modal" id="abrir-modal" data-bs-backdrop="static">
+            <!--Static = é p/ que o usuário n feche o modal apertando em qualquer lugar da tela
+            à não ser no btn-close {botão para fechar o modal}-->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5>Título Modal</h5>
+                        <button data-bs-dismiss="modal" type="button" class="btn-close"></button>
+                        <!--Data-bs-dismiss="moidal" é para fazer funcionar o btn-close-->
+                        <!--Btn-close p/ fechar o modal-->
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Officia distinctio exercitationem culpa recusandae iusto
+                            assumenda ut sunt similique ipsa perferendis neque earum,
+                            quasi minus eius tenetur at. Officia, veritatis repellendus?
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-bs-dismiss="modal" type="button" class="btn btn-danger">Cancelar</button>
+                        <button data-bs-dismiss="modal" type="button" class="btn btn-success">Confirmar</button>
+                        <!--Tem também após o script do bootstrap uma forma de abrir o
+                        modal automáticamente usando javascript ao carregar a página-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-2"> <!--Cards-->
+        <!--Em telas grandes (lg), cada item ocupa 4 colunas, permitindo que três itens sejam exibidos por linha.
+            Em tablets (md), cada item ocupa 6 colunas, permitindo que dois itens sejam exibidos por linha.
+            Em smartphones (sm), cada item ocupa 12 colunas, ocupando toda a largura da linha, exibindo um item por linha.-->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <article class="card text-bg-dark">
+                    <header class="card-header"><!--com cabeçalho-->
+                        Cabeçalho do header -cards
+                    </header>
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <h5 class="card-subtitle"></h5>
+                        <p class="card-text mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias alias reprehenderit
+                            deleniti modi
+                            quasi ratione nemo accusamus libero nam praesentium eaque, vel, labore consequuntur impedit
+                            sed voluptas odio quia ducimus?
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4"><!--Sem cabeçalho-->
+                <article class="card text-bg-dark">
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <h5 class="card-subtitle"></h5>
+                        <p class="card-text mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias alias reprehenderit
+                            deleniti modi
+                            quasi ratione nemo accusamus libero nam praesentium eaque, vel, labore consequuntur impedit
+                            sed voluptas odio quia ducimus?
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+                <article class="card text-bg-dark">
+                    <img src="https://via.placeholder.com/100x100" />
+                    <div class="card-body">
+                        <h4 class="card-title"></h4>
+                        <h5 class="card-subtitle"></h5>
+                        <p class="card-text mt-4">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias alias reprehenderit
+                            deleniti modi
+                            quasi ratione nemo accusamus libero nam praesentium eaque, vel, labore consequuntur impedit
+                            sed voluptas odio quia ducimus?
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </article>
+            </div>
+    </div>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script> // Como abrir o modal com js
+        // O código abaixo é responsável por só abrir o js após
+        //todo html ser carregado doc + functions
+        document.addEventListener('DOMContentLoaded', function () {
+            const abrirModal = new bootstrap.Modal('#abrir-modal')
+            setTimeout(function () {
+                abrirModal.show()
+            }, 1000000)
+        })
+
+        const ativadorToast = document.getElementById('btn-checar-email')
+        const mensagem = document.getElementById('mensagens-alerta')
+
+        if(ativadorToast){
+            ativadorToast.addEventListener('click', function(){
+                const toast = new bootstrap.Toast(mensagem)
+                toast.show()
+            })
+        }
+    </script>
+</body>
+
+</html>

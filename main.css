@@ -1,0 +1,41 @@
+.card-img-overlay{
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.carousel-item img {
+    max-height: 480px; 
+    width: 100%;
+}
+
+.carousel-caption{
+    display: flex;
+    justify-content: center;
+}
+
+#text-radius{
+    border-radius: 8px;
+}
+
+.dropdown-menu li a {
+    color: white;
+}
+
+.navbar-nav .nav-link.active{
+    color: white;
+}
+
+.nav-link{
+    text-align: center;
+}
+
+section{
+    height: 100vh;
+    padding-top: 80px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: antiquewhite;
+}
